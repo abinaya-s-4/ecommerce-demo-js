@@ -5,15 +5,15 @@ const products = [{
     stars: 4.5,
     count: 87,
   },
-  price : 849,
+  price : 849
 },{
   name : 'Intermediate Size Basketball',
   img : 'images/ratings/rating-40.png',
   ratings :{
-    stars:4,
+    stars:4 ,
     count: 127,
   },
-  price : 499,
+  price : 499
 
 },{
   name : 'Adults Plain Cotton T-Shirt - 2 Pack',
@@ -22,5 +22,5 @@ const products = [{
     stars:4.5 ,
     count: 56,
   },
-  price : 1799,
+  price : 1799
 }]
