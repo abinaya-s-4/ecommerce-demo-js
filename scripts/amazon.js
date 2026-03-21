@@ -47,7 +47,7 @@
       </div>
 
       <button class="add-to-cart-button button-primary js-add-to-cart"
-      data-product-id="${product.id}">
+      data-product-id="${product.name}">
         Add to Cart
       </button>
     </div>`;
@@ -55,3 +55,20 @@
   });
   document.querySelector('.js-products-grid').innerHTML= productsHTML;
 
+  let cartItem;
+  document.querySelectorAll('js-add-to-cart').forEach((button) => {
+    const productName = button.dataset.productName;
+    cart.forEach((item) => {
+      if(productName === item.productName){
+        cartItem = item
+      }
+    });
+    if(cartItem){
+      cartItem.quantity += 1;
+    }else{
+        cart.push({
+          productName : productName ,
+          quantity : 1
+        });
+      }
+  })
