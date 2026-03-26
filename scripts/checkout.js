@@ -1,4 +1,4 @@
-import {cart, removeFromCart} from '../data/cart.js';
+import {cart, removeFromCart, updateDeliveryDate} from '../data/cart.js';
 import { deliveryOption } from '../data/deliveryOptions.js';
 import {product} from '../data/products.js'
 import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
@@ -95,7 +95,7 @@ cart.forEach((cartItem)=>{
         const ischecked = deliveryItem.id === cartItem.deliveryOptionId; // value will be true or false
         deliveryOptionHTML += `
         
-        <div class="delivery-option">
+        <div class="delivery-option js-checked-id" data-product-id = "${matchingProduct.id}" data-delivery-option-id = "${deliveryItem.id}" >
           <input type="radio" ${ischecked ? 'checked' : '' } 
             class="delivery-option-input"
             name="delivery-option-${matchingProduct.id}">
@@ -113,6 +113,16 @@ cart.forEach((cartItem)=>{
     });
     return deliveryOptionHTML;
   }
-  
+  // fun to save data frm webpage fr the marked id in delivery
+  document.querySelectorAll('.js-checked-id').forEach((option) =>{
+    
+    option.addEventListener('click', () =>{
+      const {productId, deliveryOptionId} = option.dataset; 
+      updateDeliveryDate(productId,deliveryOptionId);
+    });
+    // we get product id and deliveyOPtion id for that specific html element from all the html elements generated fr diff days we are getting dataset value fr the specific element that is clicked.
+  });
+
+
   
 

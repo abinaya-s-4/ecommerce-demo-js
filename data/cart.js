@@ -52,3 +52,14 @@ export function addToCart(productId) {
     saveData();
   
   }
+
+  export function updateDeliveryDate(productId,deliveryOptionId){
+    let selectedItem;
+
+    cart.forEach((cartItem) => {
+      if(productId === cartItem.productId){
+        selectedItem = cartItem
+      }});
+      selectedItem.deliveryOptionId = deliveryOptionId ; //updating the id from the webpage using eventListeners
+    saveData();
+  }
