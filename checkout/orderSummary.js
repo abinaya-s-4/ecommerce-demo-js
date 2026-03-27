@@ -2,6 +2,7 @@ import {cart, removeFromCart, updateDeliveryDate} from '../../data/cart.js';
 import { deliveryOption , getDeliveryOption} from '../../data/deliveryOptions.js';
 import {product,getProduct} from '../../data/products.js'
 import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
+import { renderPaymentSummary } from './paymentSummary.js';
 
 export function renderOrderSummary(){
 
@@ -71,6 +72,8 @@ export function renderOrderSummary(){
 
         const container = document.querySelector(`.js-remove-cart-${productId}`);
         container.remove();
+
+        renderPaymentSummary();
       });
 
     });
@@ -114,6 +117,7 @@ export function renderOrderSummary(){
         const {productId, deliveryOptionId} = option.dataset; 
         updateDeliveryDate(productId,deliveryOptionId);
         renderOrderSummary();
+        renderPaymentSummary();  
       });
       // we get productId and deliveyOptionId for that specific html element from all the html elements generated fr diff dates with diff ids, we are getting dataset value fr the specific element that is clicked.
     });
