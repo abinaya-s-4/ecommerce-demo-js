@@ -4,7 +4,7 @@ loadFromStorage();
 
 
 export function loadFromStorage(){
-  let cart = JSON.parse(localStorage.getItem('cart'));
+  cart = JSON.parse(localStorage.getItem('cart'));
   if(!cart){
     cart = [{
     productId : "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
@@ -51,8 +51,9 @@ export function addToCart(productId) {
       if(cartItem.productId != productId){
       newCart.push(cartItem);
     }
-    cart = newCart;
+    
     });
+    cart = newCart;
     saveData();
   
   }
