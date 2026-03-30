@@ -25,5 +25,4 @@ describe('test suite: renderOrderSummary', () =>{
   loadFromStorage();
   renderOrderSummary();
   });
-  
 });
