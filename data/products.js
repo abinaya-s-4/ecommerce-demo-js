@@ -8,6 +8,41 @@ export function getProduct(productId){
     return matchingProduct;
 }
 
+class Product {
+  id;
+  image;
+  name;
+  rating;
+  price;
+
+  constructor(productDetails){
+    this.id = productDetails.id,
+    this.image= productDetails.image,
+    this.name = productDetails.name,
+    this.rating = productDetails.rating,
+    this.price= productDetails.price
+  }
+
+  getStarsUrl(){
+    return `src="images/ratings/rating-${this.rating.stars * 10}.png`
+  }
+
+}
+const product1= new Product({
+    id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
+    image: "images/products/athletic-cotton-socks-6-pairs.jpg",
+    name: "Black and Gray Athletic Cotton Socks - 6 Pairs",
+    rating: {
+      stars: 4.5,
+      count: 87
+    },
+    price: 1090,
+    keywords: [
+      "socks",
+      "sports",
+      "apparel"
+    ]});
+ 
 
 export const product = [
   {
@@ -668,4 +703,6 @@ export const product = [
       "mens"
     ]
   }
-];
+].map((productDetails)=>{
+  return new Product(productDetails);
+});
