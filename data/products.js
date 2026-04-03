@@ -59,7 +59,7 @@ class Clothing extends Product{
     `;
   }
 }
-const tshirt = new Clothing();
+
  
 
 export const product = [
