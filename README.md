@@ -1,20 +1,27 @@
-# 🛒 Amazon Clone – JavaScript Project
+#  Amazon Clone – JavaScript Project
 
 An Amazon-inspired e-commerce frontend where I implemented all JavaScript functionality including cart management, delivery options, and a multi-page checkout flow.
 
-## 🔗 Live Demo
+##  Live Demo
 [View Live Site](https://abinaya-s-4.github.io/amazon-clone-javascript/)
 
-## 📸 Features
+##  Features
 - Browse a product catalog with names, images, and prices
 - Add items to cart and update quantities dynamically
 - Choose delivery options with estimated delivery dates (powered by Day.js)
 - Multi-page flow: Home → Cart → Checkout → Order Tracking
 - Cart data persists using localStorage
-
-## 🛠️ Tech Stack
+  
 - **JavaScript (ES6+)** – DOM manipulation, ES Modules, event handling
 
-## 📌 Notes
+  ## Getting Started
+1. Clone the repo
+   ```
+   git clone https://github.com/abinaya-s-4/amazon-clone-javascript/
+   ```
+2. Open `amazon.html` in your browser
+
+
+##  Notes
 This is a front-end only project built for learning purposes. 
 Not affiliated with Amazon. Focused on JavaScript fundamentals and project structure.
