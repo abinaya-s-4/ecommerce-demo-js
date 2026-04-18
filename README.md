@@ -19,7 +19,7 @@ An Amazon-inspired e-commerce frontend where I implemented all JavaScript functi
    ```
    git clone https://github.com/abinaya-s-4/amazon-clone-javascript.git
    ```
-2. Open `amazon.html` in your browser
+2. Open `index.html` in your browser
 
 
 ##  Notes
