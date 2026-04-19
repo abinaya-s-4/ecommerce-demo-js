@@ -3,7 +3,7 @@
 An Amazon-inspired e-commerce frontend where I implemented all JavaScript functionality including cart management, delivery options, and a multi-page checkout flow.
 
 ##  Live Demo
-[View Live Site]()
+[View Live Site](https://abinaya-s-4.netlify.app/)
 
 ##  Features
 - Browse a product catalog with names, images, and prices
