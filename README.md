@@ -17,7 +17,7 @@ An Amazon-inspired e-commerce frontend where I implemented all JavaScript functi
   ## Getting Started
 1. Clone the repo
    ```
-   git clone https://github.com/abinaya-s-4/amazon-clone-javascript.git
+   git clone https://github.com/abinaya-s-4/ecommerce-demo-js.git
    ```
 2. Open `index.html` in your browser
 
