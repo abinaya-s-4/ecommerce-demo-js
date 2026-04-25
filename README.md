@@ -1,4 +1,4 @@
-#  Amazon Clone – JavaScript Project
+#  JavaScript E-Commerce Application
 
 An Amazon-inspired e-commerce frontend where I implemented all JavaScript functionality including cart management, delivery options, and a multi-page checkout flow.
 
